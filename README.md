@@ -1,6 +1,6 @@
 # DICOM AI Report Generator
 
-Upload a `.dcm` file → Gemini 1.5 Flash analyzes the scan → get a full PDF + JSON report.
+Upload a `.dcm` file → Gemini 2.5 Flash analyzes the scan → get a full PDF + JSON report.
 
 ## What it does
 
