@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DICOM AI Report Generator</title>
+    <style>
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #f8fafc;
+        color: #0f172a;
+        min-height: 100vh;
+
+        /* CSS variables to match the design system */
+        --color-background-primary: #ffffff;
+        --color-background-secondary: #f1f5f9;
+        --color-background-tertiary: #f8fafc;
+        --color-background-info: #eff6ff;
+        --color-background-danger: #fef2f2;
+        --color-background-success: #f0fdf4;
+        --color-background-warning: #fefce8;
+
+        --color-text-primary: #0f172a;
+        --color-text-secondary: #64748b;
+        --color-text-tertiary: #94a3b8;
+        --color-text-info: #1d4ed8;
+        --color-text-danger: #dc2626;
+        --color-text-success: #16a34a;
+        --color-text-warning: #ca8a04;
+
+        --color-border-tertiary: rgba(15,23,42,0.1);
+        --color-border-secondary: rgba(15,23,42,0.2);
+        --color-border-primary: rgba(15,23,42,0.3);
+        --color-border-info: #93c5fd;
+        --color-border-danger: #fca5a5;
+        --color-border-success: #86efac;
+        --color-border-warning: #fde047;
+
+        --border-radius-md: 8px;
+        --border-radius-lg: 12px;
+        --border-radius-xl: 16px;
+
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        --font-mono: "JetBrains Mono", "Fira Code", monospace;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #0f172a;
+          color: #f1f5f9;
+
+          --color-background-primary: #1e293b;
+          --color-background-secondary: #0f172a;
+          --color-background-tertiary: #020617;
+          --color-background-info: #1e3a5f;
+          --color-background-danger: #450a0a;
+          --color-background-success: #052e16;
+          --color-background-warning: #422006;
+
+          --color-text-primary: #f1f5f9;
+          --color-text-secondary: #94a3b8;
+          --color-text-tertiary: #64748b;
+          --color-text-info: #60a5fa;
+          --color-text-danger: #f87171;
+          --color-text-success: #4ade80;
+          --color-text-warning: #facc15;
+
+          --color-border-tertiary: rgba(241,245,249,0.1);
+          --color-border-secondary: rgba(241,245,249,0.2);
+          --color-border-primary: rgba(241,245,249,0.3);
+          --color-border-info: #1e40af;
+          --color-border-danger: #991b1b;
+          --color-border-success: #166534;
+          --color-border-warning: #854d0e;
+        }
+      }
+
+      button {
+        cursor: pointer;
+        padding: 7px 14px;
+        border-radius: var(--border-radius-md);
+        border: 0.5px solid var(--color-border-secondary);
+        background: transparent;
+        color: var(--color-text-primary);
+        font-size: 13px;
+        font-family: var(--font-sans);
+        transition: background 0.1s;
+      }
+      button:hover { background: var(--color-background-secondary); }
+      button:active { transform: scale(0.98); }
+
+      a { color: inherit; text-decoration: none; }
+
+      code {
+        font-family: var(--font-mono);
+        font-size: 0.9em;
+        background: var(--color-background-secondary);
+        padding: 1px 5px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.jsx"></script>
+  </body>
+</html>
